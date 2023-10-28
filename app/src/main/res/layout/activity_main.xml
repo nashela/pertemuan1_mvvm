@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.shelazh.mvvmapp.main.MainViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,10 +16,9 @@
 
         <TextView
             android:id="@+id/tv_counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/number"
-            android:textSize="72sp"
+            style="@style/all_wrap"
+            android:text='@{viewModel.counter.toString()}'
+            android:textSize="@dimen/_72ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +26,10 @@
 
         <Button
             android:id="@+id/btn_increaseCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
+            style="@style/all_wrap"
+            android:padding="@dimen/_16sdp"
             android:text="@string/addition"
+            android:onClick='@{() -> viewModel.increaseCounter()}'
             app:layout_constraintBottom_toBottomOf="@id/tv_counter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_counter"
@@ -32,10 +37,10 @@
 
         <Button
             android:id="@+id/btn_decreaseCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
+            style="@style/all_wrap"
+            android:padding="@dimen/_16sdp"
             android:text="@string/subtraction"
+            android:onClick='@{() -> viewModel.decreaseCounter()}'
             app:layout_constraintBottom_toBottomOf="@id/tv_counter"
             app:layout_constraintEnd_toEndOf="@id/tv_counter"
             app:layout_constraintHorizontal_bias="0.376"

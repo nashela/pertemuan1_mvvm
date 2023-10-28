@@ -2,11 +2,13 @@ package com.shelazh.mvvmapp.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.shelazh.mvvmapp.R
 import com.shelazh.mvvmapp.databinding.ActivityMainBinding
 
+//@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding: ActivityMainBinding by lazy {
@@ -18,16 +20,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.tvCounter.text = viewModel.counter.get().toString()
-
-        binding.btnIncreaseCounter.setOnClickListener {
-            viewModel.increaseCounter()
-            binding.tvCounter.text = viewModel.counter.get().toString()
-        }
-        binding.btnDecreaseCounter.setOnClickListener {
-            viewModel.decreaseCounter()
-            binding.tvCounter.text = viewModel.counter.get().toString()
-        }
-
+        binding.viewModel = viewModel
     }
 }
