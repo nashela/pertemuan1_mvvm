@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1038169248712",
+    "project_id": "nashela-hellofirebase",
+    "storage_bucket": "nashela-hellofirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038169248712:android:2aa1ef40c7f51e8a9166fd",
+        "android_client_info": {
+          "package_name": "com.shelazh.mvvmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038169248712-q743m99ve4fknnklcd8aap6tij346esn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIkRGSrVaF-WLGUe11KLLxjIYbeXYJQaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038169248712-q743m99ve4fknnklcd8aap6tij346esn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
